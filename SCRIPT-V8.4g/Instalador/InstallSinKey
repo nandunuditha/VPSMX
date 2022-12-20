@@ -231,7 +231,7 @@ unzip badvpn.zip >/dev/null 2>&1
 cd badvpn-master
 mkdir build >/dev/null 2>&1
 cd build
-echo $(cmake .. -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1)
+echo $(cmake .. -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1) >/dev/null 2>&1
 sudo make install >/dev/null 2>&1
 cd
 wget -O /etc/versin_script_new https://raw.githubusercontent.com/nandunuditha/VPSMX/master/SCRIPT-V8.4g/Version &>/dev/null
