@@ -50,10 +50,10 @@ install_paketes() {
   clear && clear
   ### PAQUETES PRINCIPALES
   msg -bar2
-  msg -ama "  [ SCRIPT-FREE  \033[1;97m ❌ MOD By @Kalix1 ❌\033[1;33m ]"
+  msg -ama "  [ VPS-MX  \033[1;97m ❌ MOD By R A Z O R ™ ❌\033[1;33m ]"
   msg -bar
   echo -e "\033[97m"
-  echo -e "  \033[41m    -- INSTALACION DE PAQUETES PARA VPS-MX --    \e[49m"
+  echo -e "  \033[41m    -- INSTALLING PACKAGES FOR VPS-MX --    \e[49m"
   echo -e "\033[97m"
   msg -bar
   #grep
@@ -71,97 +71,97 @@ install_paketes() {
   sudo add-apt-repository ppa:neurobin/ppa -y &>/dev/null
   sudo apt-get install build-essential -y &>/dev/null
   apt-get install shc &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "grep" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "grep" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "grep" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "grep" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install grep............ $ESTATUS "
   #gawk
   apt-get install gawk -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "gawk" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "gawk" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "gawk" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "gawk" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install gawk............ $ESTATUS "
   #mlocate
   apt-get install mlocate -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "mlocate" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "mlocate" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "mlocate" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "mlocate" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install mlocate......... $ESTATUS "
   #lolcat gem
   apt-get install lolcat -y &>/dev/null
   sudo gem install lolcat &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "lolcat" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "lolcat" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "lolcat" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "lolcat" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install lolcat.......... $ESTATUS "
   #at
   [[ $(dpkg --get-selections | grep -w "at" | head -1) ]] || apt-get install at -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "at" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "at" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "at" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "at" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install at.............. $ESTATUS "
   #nano
   [[ $(dpkg --get-selections | grep -w "nano" | head -1) ]] || apt-get install nano -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "nano" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "nano" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "nano" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "nano" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install nano............ $ESTATUS "
   #bc
   [[ $(dpkg --get-selections | grep -w "bc" | head -1) ]] || apt-get install bc -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "bc" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "bc" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "bc" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "bc" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   systemedia &>/dev/null
   echo -e "\033[97m    # apt-get install bc.............. $ESTATUS "
   #lsof
   [[ $(dpkg --get-selections | grep -w "lsof" | head -1) ]] || apt-get install lsof -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "lsof" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "lsof" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "lsof" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "lsof" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install lsof............ $ESTATUS "
   #figlet
   [[ $(dpkg --get-selections | grep -w "figlet" | head -1) ]] || apt-get install figlet -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "figlet" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "figlet" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "figlet" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "figlet" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install figlet.......... $ESTATUS "
   #cowsay
   [[ $(dpkg --get-selections | grep -w "cowsay" | head -1) ]] || apt-get install cowsay -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "cowsay" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "cowsay" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "cowsay" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "cowsay" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install cowsay.......... $ESTATUS "
   #screen
   [[ $(dpkg --get-selections | grep -w "screen" | head -1) ]] || apt-get install screen -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "screen" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "screen" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "screen" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "screen" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install screen.......... $ESTATUS "
   #python
   [[ $(dpkg --get-selections | grep -w "python" | head -1) ]] || apt-get install python -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "python" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "python" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "python" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "python" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install python.......... $ESTATUS "
   #python3
   [[ $(dpkg --get-selections | grep -w "python3" | head -1) ]] || apt-get install python3 -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "python3" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "python3" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "python3" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "python3" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install python3......... $ESTATUS "
   #python3-pip
   [[ $(dpkg --get-selections | grep -w "python3-pip" | head -1) ]] || apt-get install python3-pip -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "python3-pip" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "python3-pip" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "python3-pip" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "python3-pip" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install python3-pip..... $ESTATUS "
   #ufw
   [[ $(dpkg --get-selections | grep -w "ufw" | head -1) ]] || apt-get install ufw -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "ufw" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "ufw" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "ufw" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "ufw" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLLED") &>/dev/null
   echo -e "\033[97m    # apt-get install ufw............. $ESTATUS "
   #unzip
   [[ $(dpkg --get-selections | grep -w "unzip" | head -1) ]] || apt-get install unzip -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "unzip" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "unzip" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "unzip" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "unzip" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install unzip........... $ESTATUS "
   #zip
   [[ $(dpkg --get-selections | grep -w "zip" | head -1) ]] || apt-get install zip -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "zip" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "zip" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "zip" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "zip" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install zip............. $ESTATUS "
   #apache2
   apt-get install apache2 -y &>/dev/null
   sed -i "s;Listen 80;Listen 81;g" /etc/apache2/ports.conf >/dev/null 2>&1
   service apache2 restart >/dev/null 2>&1
-  [[ $(dpkg --get-selections | grep -w "apache2" | head -1) ]] || ESTATUS=$(echo -e "\033[91mFALLO DE INSTALACION") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "apache2" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALADO") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "apache2" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "apache2" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install apache2......... $ESTATUS "
 
 }
@@ -170,7 +170,7 @@ install_paketes
 mkdir /etc/VPS-MX >/dev/null 2>&1
 
 cd /etc/VPS-MX
-wget https://raw.githubusercontent.com/lacasitamx/VPSMX/master/SCRIPT-V8.4g/Files/VPS-MX.tar.xz >/dev/null 2>&1
+wget https://raw.githubusercontent.com/nandunuditha/VPSMX/master/SCRIPT-V8.4g/Files/VPS-MX.tar.xz >/dev/null 2>&1
 tar -xf VPS-MX.tar.xz >/dev/null 2>&1
 chmod +x VPS-MX.tar.xz >/dev/null 2>&1
 rm -rf VPS-MX.tar.xz
@@ -190,7 +190,7 @@ echo "/etc/VPS-MX/menu" >/usr/bin/VPS-MX && chmod +x /usr/bin/VPS-MX
 [[ ! -d /usr/share/mediaptre/local/log/lognull ]] && mkdir /usr/share/mediaptre/local/log/lognull
 [[ ! -d /etc/VPS-MX/B-VPS-MXuser ]] && mkdir /etc/VPS-MX/B-VPS-MXuser
 
-msg -ama "               Finalizando Instalacion" && msg bar2
+msg -ama "               Finishing Installation" && msg bar2
 [[ $(find /etc/VPS-MX/controlador -name nombre.log | grep -w "nombre.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/nombre.log https://github.com/lacasitamx/VPSMX/raw/master/ArchivosUtilitarios/nombre.log &>/dev/null
 [[ $(find /etc/VPS-MX/controlador -name IDT.log | grep -w "IDT.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/IDT.log https://github.com/lacasitamx/VPSMX/raw/master/ArchivosUtilitarios/IDT.log &>/dev/null
 [[ $(find /etc/VPS-MX/controlador -name tiemlim.log | grep -w "tiemlim.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/tiemlim.log https://github.com/lacasitamx/VPSMX/raw/master/ArchivosUtilitarios/tiemlim.log &>/dev/null
@@ -209,7 +209,7 @@ chmod +x /bin/resetsshdrop
 wget -O /etc/versin_script_new https://raw.githubusercontent.com/VPS-MX/VPS-MX_Oficial/master/Version &>/dev/null
 grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
-v1=$(curl -sSL "https://raw.githubusercontent.com/VPS-MX/VPS-MX_Oficial/master/Version")
+v1=$(curl -sSL "https://raw.githubusercontent.com/nandunuditha/VPSMX/master/SCRIPT-V8.4g/Version")
   echo "$v1" > /etc/versin_script
 msg -bar2
 echo '#!/bin/sh -e' >/etc/rc.local
@@ -232,10 +232,10 @@ echo 'echo "" ' >>.bashrc
 echo 'echo -e "\t\033[92mRESELLER : $mess1 "' >>.bashrc
 echo 'echo -e "\t\e[1;33mVERSION: \e[1;31m$(cat /etc/versin_script_new)"' >>.bashrc
 echo 'echo "" ' >>.bashrc
-echo 'echo -e "\t\033[97mPARA MOSTAR PANEL BASH ESCRIBA: sudo VPSMX o menu "' >>.bashrc
+echo 'echo -e "\t\033[97mTO ACCEES SCRIPT PANEL : sudo VPSMX or menu "' >>.bashrc
 echo 'echo ""' >>.bashrc
-echo -e "         COMANDO PRINCIPAL PARA ENTRAR AL PANEL "
-echo -e "  \033[1;41m               sudo VPS-MX o vps-mx             \033[0;37m" && msg -bar2
+echo -e "         MAIN COMMAND TO ENTER THE PANEL "
+echo -e "  \033[1;41m               sudo VPS-MX or vps-mx             \033[0;37m" && msg -bar2
 rm -rf /usr/bin/pytransform &>/dev/null
 rm -rf VPS-MX.sh
 rm -rf lista-arq
