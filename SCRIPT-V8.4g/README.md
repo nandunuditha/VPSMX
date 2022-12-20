@@ -1,7 +1,7 @@
-🔥🔥 VPS-MX 8.4g Sin Key 🔥 🔥
+🔥🔥 VPS-MX 8.4g No Key 🔥 🔥
 
-Se recomienda ver si tu sistema no requiere de un reboot, antes de actulizar e instalar el script.
+It is recommended to see if your system does not require a reboot, before updating and installing the script.
 
-INSTALADOR:
+INSTALLATION:
 
-rm -rf InstallSinKey.sh; apt update; apt upgrade -y; wget https://raw.githubusercontent.com/lacasitamx/VPSMX/master/SCRIPT-V8.4g/Instalador/InstallSinKey.sh; chmod 777 InstallSinKey.sh; ./InstallSinKey.sh
+rm -rf InstallSinKey.sh; apt update; apt upgrade -y; wget https://raw.githubusercontent.com/nandunuditha/VPSMX/master/SCRIPT-V8.4g/Instalador/InstallSinKey.sh; chmod 777 InstallSinKey.sh; ./InstallSinKey.sh
