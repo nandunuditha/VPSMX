@@ -93,7 +93,7 @@ install_paketes() {
   apt-get install build-essential -y &>/dev/null
   [[ $(dpkg --get-selections | grep -w "build-essential" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
   [[ $(dpkg --get-selections | grep -w "build-essential" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
-  echo -e "\033[97m    # apt-get install build-essential........... $ESTATUS "
+  echo -e "\033[97m    # apt-get install build-essential. $ESTATUS "
   #gawk
   apt-get install gawk -y &>/dev/null
   [[ $(dpkg --get-selections | grep -w "gawk" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
@@ -164,7 +164,7 @@ install_paketes() {
   #ufw
   [[ $(dpkg --get-selections | grep -w "ufw" | head -1) ]] || apt-get install ufw -y &>/dev/null
   [[ $(dpkg --get-selections | grep -w "ufw" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "ufw" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLLED") &>/dev/null
+  [[ $(dpkg --get-selections | grep -w "ufw" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install ufw............. $ESTATUS "
   #unzip
   [[ $(dpkg --get-selections | grep -w "unzip" | head -1) ]] || apt-get install unzip -y &>/dev/null
