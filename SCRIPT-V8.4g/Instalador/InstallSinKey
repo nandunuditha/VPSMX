@@ -226,7 +226,6 @@ wget -O /bin/rebootnb https://raw.githubusercontent.com/lacasitamx/VPSMX/master/
 chmod +x /bin/rebootnb
 wget -O /bin/resetsshdrop https://raw.githubusercontent.com/lacasitamx/VPSMX/master/SCRIPT-8.4/Utilidad/resetsshdrop &>/dev/null
 chmod +x /bin/resetsshdrop
-wget -O /etc/VPS-MX/protocolos/badvpn.zip https://github.com/ambrop72/badvpn/archive/master.zip &>/dev/null
 cd /etc/VPS-MX/protocolos/
 unzip badvpn.zip >/dev/null 2>&1
 rm -rf badvpn.zip
