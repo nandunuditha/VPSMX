@@ -228,7 +228,6 @@ wget -O /bin/resetsshdrop https://raw.githubusercontent.com/lacasitamx/VPSMX/mas
 chmod +x /bin/resetsshdrop
 cd /etc/VPS-MX/protocolos/
 unzip badvpn.zip >/dev/null 2>&1
-rm -rf badvpn.zip
 cd badvpn-master
 mkdir build >/dev/null 2>&1
 cd build
