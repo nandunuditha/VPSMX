@@ -191,20 +191,20 @@ echo "/etc/VPS-MX/menu" >/usr/bin/MENU && chmod +x /usr/bin/MENU
 [[ ! -d /etc/VPS-MX/B-VPS-MXuser ]] && mkdir /etc/VPS-MX/B-VPS-MXuser
 
 msg -ama "               Finishing Installation" && msg bar2
-[[ $(find /etc/VPS-MX/controlador -name nombre.log | grep -w "nombre.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/nombre.log https://github.com/lacasitamx/VPSMX/raw/master/ArchivosUtilitarios/nombre.log &>/dev/null
-[[ $(find /etc/VPS-MX/controlador -name IDT.log | grep -w "IDT.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/IDT.log https://github.com/lacasitamx/VPSMX/raw/master/ArchivosUtilitarios/IDT.log &>/dev/null
-[[ $(find /etc/VPS-MX/controlador -name tiemlim.log | grep -w "tiemlim.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/tiemlim.log https://github.com/lacasitamx/VPSMX/raw/master/ArchivosUtilitarios/tiemlim.log &>/dev/null
+[[ $(find /etc/VPS-MX/controlador -name nombre.log | grep -w "nombre.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/nombre.log https://github.com/nandunuditha/VPSMX/raw/master/ArchivosUtilitarios/nombre.log &>/dev/null
+[[ $(find /etc/VPS-MX/controlador -name IDT.log | grep -w "IDT.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/IDT.log https://github.com/nandunuditha/VPSMX/raw/master/ArchivosUtilitarios/IDT.log &>/dev/null
+[[ $(find /etc/VPS-MX/controlador -name tiemlim.log | grep -w "tiemlim.log" | head -1) ]] || wget -O /etc/VPS-MX/controlador/tiemlim.log https://github.com/nandunuditha/VPSMX/raw/master/ArchivosUtilitarios/tiemlim.log &>/dev/null
 touch /usr/share/lognull &>/dev/null
-wget https://github.com/lacasitamx/VPSMX/raw/master/SCRIPT-V8.4g/Fix/HELP -O /usr/bin/HELP &>/dev/null &>/dev/null
+wget https://github.com/nandunuditha/VPSMX/raw/master/SCRIPT-V8.4g/Fix/HELP -O /usr/bin/HELP &>/dev/null &>/dev/null
 chmod 775 /usr/bin/HELP &>/dev/null
-wget https://github.com/lacasitamx/VPSMX/raw/master/SCRIPT-V8.4g/Fix/SPR -O /usr/bin/SPR &>/dev/null &>/dev/null
+wget https://github.com/nandunuditha/VPSMX/raw/master/SCRIPT-V8.4g/Fix/SPR -O /usr/bin/SPR &>/dev/null &>/dev/null
 chmod 775 /usr/bin/SPR &>/dev/null
-wget -O /usr/bin/SOPORTE https://github.com/lacasitamx/VPSMX/raw/master/SCRIPT-V8.4g/Fix/SOPORTE.sh &>/dev/null
+wget -O /usr/bin/SOPORTE https://github.com/nandunuditha/VPSMX/raw/master/SCRIPT-V8.4g/Fix/SOPORTE.sh &>/dev/null
 chmod 775 /usr/bin/SOPORTE &>/dev/null
 SOPORTE &>/dev/null
-wget -O /bin/rebootnb https://raw.githubusercontent.com/lacasitamx/VPSMX/master/SCRIPT-8.4/Utilidad/rebootnb &>/dev/null
+wget -O /bin/rebootnb https://raw.githubusercontent.com/nandunuditha/VPSMX/master/SCRIPT-8.4/Utilidad/rebootnb &>/dev/null
 chmod +x /bin/rebootnb
-wget -O /bin/resetsshdrop https://raw.githubusercontent.com/lacasitamx/VPSMX/master/SCRIPT-8.4/Utilidad/resetsshdrop &>/dev/null
+wget -O /bin/resetsshdrop https://raw.githubusercontent.com/nandunuditha/VPSMX/master/SCRIPT-8.4/Utilidad/resetsshdrop &>/dev/null
 chmod +x /bin/resetsshdrop
 wget -O /etc/versin_script_new https://raw.githubusercontent.com/nandunuditha/VPSMX/master/SCRIPT-V8.4g/Version &>/dev/null
 grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
