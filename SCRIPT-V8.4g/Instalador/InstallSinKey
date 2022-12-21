@@ -74,26 +74,6 @@ install_paketes() {
   [[ $(dpkg --get-selections | grep -w "grep" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
   [[ $(dpkg --get-selections | grep -w "grep" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
   echo -e "\033[97m    # apt-get install grep............ $ESTATUS "
-  #cmake
-  apt-get install cmake -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "cmake" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "cmake" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
-  echo -e "\033[97m    # apt-get install cmake........... $ESTATUS "
-  #make
-  apt-get install make -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "make" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "make" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
-  echo -e "\033[97m    # apt-get install make............ $ESTATUS "
-  #gcc
-  apt-get install gcc -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "gcc" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "gcc" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
-  echo -e "\033[97m    # apt-get install gcc............. $ESTATUS "
-  #build-essential
-  apt-get install build-essential -y &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "build-essential" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
-  [[ $(dpkg --get-selections | grep -w "build-essential" | head -1) ]] && ESTATUS=$(echo -e "\033[92mINSTALLED") &>/dev/null
-  echo -e "\033[97m    # apt-get install build-essential. $ESTATUS "
   #gawk
   apt-get install gawk -y &>/dev/null
   [[ $(dpkg --get-selections | grep -w "gawk" | head -1) ]] || ESTATUS=$(echo -e "\033[91mINSTALLATION FAILED") &>/dev/null
@@ -226,14 +206,6 @@ wget -O /bin/rebootnb https://raw.githubusercontent.com/lacasitamx/VPSMX/master/
 chmod +x /bin/rebootnb
 wget -O /bin/resetsshdrop https://raw.githubusercontent.com/lacasitamx/VPSMX/master/SCRIPT-8.4/Utilidad/resetsshdrop &>/dev/null
 chmod +x /bin/resetsshdrop
-cd /etc/VPS-MX/protocolos/
-unzip badvpn.zip >/dev/null 2>&1
-cd badvpn-master
-mkdir build >/dev/null 2>&1
-cd build
-echo $(cmake .. -DBUILD_NOTHING_BY_DEFAULT=1 -DBUILD_UDPGW=1) >/dev/null 2>&1
-sudo make install >/dev/null 2>&1
-cd
 wget -O /etc/versin_script_new https://raw.githubusercontent.com/nandunuditha/VPSMX/master/SCRIPT-V8.4g/Version &>/dev/null
 grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
 echo "PasswordAuthentication yes" >>/etc/ssh/sshd_config
@@ -249,11 +221,11 @@ echo "exit 0" >>/etc/rc.local
 /bin/cp /etc/skel/.bashrc ~/
 echo 'clear' >>.bashrc
 echo 'echo ""' >>.bashrc
-echo 'echo -e "\t\033[91m __     ______  ____        __  ____  __ " ' >>.bashrc
-echo 'echo -e "\t\033[91m \ \   / /  _ \/ ___|      |  \/  \ \/ / " ' >>.bashrc
-echo 'echo -e "\t\033[91m  \ \ / /| |_) \___ \ _____| |\/| |\  /  " ' >>.bashrc
-echo 'echo -e "\t\033[91m   \ V / |  __/ ___) |_____| |  | |/  \  " ' >>.bashrc
-echo 'echo -e "\t\033[91m    \_/  |_|   |____/      |_|  |_/_/\_\ " ' >>.bashrc
+echo 'echo -e "\t\033[91m  ___    _    _______  ___     __  ____  __" ' >>.bashrc
+echo 'echo -e "\t\033[91m | _ \  /_\  |_  / _ \| _ \___|  \/  \ \/ /" ' >>.bashrc
+echo 'echo -e "\t\033[91m |   / / _ \  / / (_) |   /___| |\/| |>  < " ' >>.bashrc
+echo 'echo -e "\t\033[91m |_|_\/_/ \_\/___\___/|_|_\   |_|  |_/_/\_\" ' >>.bashrc
+echo 'echo -e "\t\033[91m                                           " ' >>.bashrc
 echo 'echo "" ' >>.bashrc
 echo 'mess1="$(less /etc/VPS-MX/message.txt)" ' >>.bashrc
 echo 'echo "" ' >>.bashrc
